@@ -1,0 +1,18 @@
+{
+  "name": "@spurpose/forecast",
+  "version": "0.0.7",
+  "description": "bead enhancer",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "forecast": "index.js"
+  },
+  "preferGlobal": true,
+  "author": "hays",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^3.10.1",
+    "request": "^2.65.0"
+  }
+}
