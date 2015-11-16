@@ -30,7 +30,7 @@ process.stdin.on('end', function() {
               };
               var forecast = JSON.parse(body);
               var newBead = _.assign(forecast.currently, bead);
-              process.stdout.write(JSON.stringify(newBead, null, 2));
+              console.log(JSON.stringify(newBead, null, 2));
               process.exit(0);
               });
   } else {
