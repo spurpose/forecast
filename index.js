@@ -28,9 +28,10 @@ process.stdin.on('end', function() {
               if(err) {
                 throw err;
               };
+              console.log(body);
               var forecast = JSON.parse(body);
               var newBead = _.assign(forecast.currently, bead);
-              console.log(JSON.stringify(newBead, null, 2));
+              process.stdout.write(JSON.stringify(newBead, null, 2));
               process.exit(0);
               });
   } else {
