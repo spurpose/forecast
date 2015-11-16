@@ -20,7 +20,7 @@ process.stdin.on('end', function() {
   var bead = JSON.parse(flowFile);
   
   console.log("orig===============");
-  console.log(JSON.stringify(flowFile,null,2);
+  console.log(JSON.stringify(flowFile,null,2));
 
   if(bead.latitude !== undefined && bead.longitude !== undefined) {
     var url = 'https://api.forecast.io/forecast/' +
@@ -34,10 +34,10 @@ process.stdin.on('end', function() {
               };
               var forecast = JSON.parse(body);
               console.log("forecast===============");
-              console.log(JSON.stringify(body,null,2);
+              console.log(JSON.stringify(body,null,2));
               var newBead = _.assign(forecast.currently, bead);
               console.log("newBead===============");
-              console.log(JSON.stringify(newBead,null,2);
+              console.log(JSON.stringify(newBead,null,2));
               process.stdout.write(JSON.stringify(newBead, null, 2));
               process.exit(0);
               });
