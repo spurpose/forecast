@@ -23,12 +23,11 @@ process.stdin.on('end', function() {
     request('https://api.forecast.io/forecast/' +
             forecastEnv.apiKey +
             '/' +
-            bead.latitude + ',' + bead.longitude,
+            bead.latitude + ',' + bead.longitude + ',' + bead.localISO,
             function(err, resp, body) {
               if(err) {
                 throw err;
               };
-              console.log(body);
               var forecast = JSON.parse(body);
               var newBead = _.assign(forecast.currently, bead);
               process.stdout.write(JSON.stringify(newBead, null, 2));
